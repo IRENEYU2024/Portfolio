@@ -12,11 +12,52 @@
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="./fontawesome-free-5.7.2-web/css/all.css">
     <link rel="stylesheet" href="./css/index.css">
+    <!-- 引入 Lightbox2 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <!-- 引入 jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 引入 Lightbox2 的 JS 文件 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>  
 </head>
+<style>
+    .info {
+        /* 取消浮動(方法二) */
+        /* 使用前提是因為.box有上一層 */
+        /* 多餘未用完的部份隱藏 */
+        /* overflow: hidden; */
+        /* background-color: #a39466; */
+        /* padding: 20px 75px; */
+    }
+
+    .info .box {
+        /* border: 1px solid red; */
+        /* 浮動對齊 */
+        /* float: left; */
+        /* 水平區塊排列 */
+        display: inline-block;
+    }
+
+    .info .box img {
+        border: 3px solid #fff;
+        border-radius: 50%;
+        width: 350px;
+        margin: 5px;
+        margin-top: 100px;
+        margin-left: 20px;
+
+    }
+
+    .info .box h4 {
+        text-align: center;
+        color: rgb(15, 15, 15);
+
+    }
+
+</style>
 
 <body>
     <!-- 導覽列 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <a class="navbar-brand js-scroll-trigger" href="#home">
             <img src="./images/logo irene.png" alt="">
         </a>
@@ -39,14 +80,14 @@
                     <a class="nav-link js-scroll-trigger" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#news">News</a>
+                    <a class="nav-link js-scroll-trigger" href="#porfolio">Portfolio</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#service">Service</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
+                </li> -->
 
             </ul>
         </div>
@@ -89,12 +130,12 @@
             </div>
     </section>
     <!-- NEWS -->
-    <section id="news">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
-                <div class="txt-bg">
-                    <!-- 行內樣式 -->
-                    <h2><i class="fas fa-dog" style="color: #63E6BE;"></i>NEWS</h2>
+                <!-- <div class="txt-bg"> -->
+                <!-- 行內樣式 -->
+                <!-- <h2><i class="fas fa-dog" style="color: #63E6BE;"></i>NEWS</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cumque vitae accusantium qui nostrum,
                         eum, rerum praesentium aliquam autem porro sapiente, esse laboriosam eos quam eveniet doloremque
                         minima! Aliquam quam magnam placeat eos voluptates suscipit maiores id praesentium consequatur vitae
@@ -104,48 +145,45 @@
                         aspernatur adipisci, tenetur animi? Minima qui molestias quia mollitia! Exercitationem provident
                         mollitia id, maxime adipisci sit impedit molestias minus officia nemo omnis.
                     </p>
+                </div> -->
+                <div class="info">
+                    <div class="box">
+                            <a href="./images/G1.jpg" data-lightbox="theme1" data-title="Graphic - Image 1"><img src="./images/GRAPHIC DESIGN.jpg" alt="Graphic - Image 1"></a>
+                            <a href="./images/G2.jpg" data-lightbox="theme1" data-title="Graphic - Image 2"></a>
+                            <a href="./images/G3.jpg" data-lightbox="theme1" data-title="Graphic - Image 3"></a>
+                            <a href="./images/G4.jpg" data-lightbox="theme1" data-title="Graphic - Image 4"></a>
+                            <a href="./images/G5.jpg" data-lightbox="theme1" data-title="Graphic - Image 5"></a>
+                        <h4>GRAPHIC DESIGN</h4>
+                    </div>
+                    <div class="box">
+                            <a href="./images/C1.jpg" data-lightbox="theme2" data-title="Commercial - Image 1"><img src="./images/COMMERCIAL DESIGN.jpg" alt="Commercial - Image 1"></a>
+                            <a href="./images/C2.jpg" data-lightbox="theme2" data-title="Commercial - Image 2"></a>
+                            <a href="./images/C3.jpg" data-lightbox="theme2" data-title="Commercial - Image 3"></a>
+                            <a href="./images/C4.jpg" data-lightbox="theme2" data-title="Commercial - Image 4"></a>
+                            <a href="./images/C5.jpg" data-lightbox="theme2" data-title="Commercial - Image 5"></a>
+                        <h4>COMMERCIAL DESIGN</h4>
+                    </div>
+                    <div class="box">
+                            <a href="./images/M1.JPG" data-lightbox="theme3" data-title="Marcom - Image 1"><img src="./images/MARCOM.jpg" alt="Marcom - Image 1"></a>
+                            <a href="./images/M2.JPG" data-lightbox="theme3" data-title="Marcom - Image 2"></a>
+                            <a href="./images/M3.JPG" data-lightbox="theme3" data-title="Marcom - Image 3"></a>
+                            <a href="./images/M4.JPG" data-lightbox="theme3" data-title="Marcom - Image 4"></a>
+                            <a href="./images/M5.PNG" data-lightbox="theme3" data-title="Marcom - Image 5"></a>
+                        <h4>MARCOM</h4>
+                    </div>
                 </div>
             </div>
     </section>
-    <!-- SERVICE -->
-    <section id="service">
-        <div class="container">
-            <div class="row">
-                <div class="txt-bg">
-                    <h2>SERVICE</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cumque vitae accusantium qui nostrum,
-                        eum, rerum praesentium aliquam autem porro sapiente, esse laboriosam eos quam eveniet doloremque
-                        minima! Aliquam quam magnam placeat eos voluptates suscipit maiores id praesentium consequatur vitae
-                        tempora veritatis facilis debitis doloribus, repudiandae deleniti numquam nemo obcaecati illo, odit
-                        neque recusandae fugit! Aut inventore facilis molestiae. Velit et explicabo laboriosam quae ipsum
-                        atque, magni sequi magnam ipsam ullam odio provident quasi asperiores perspiciatis dolorem minima
-                        aspernatur adipisci, tenetur animi? Minima qui molestias quia mollitia! Exercitationem provident
-                        mollitia id, maxime adipisci sit impedit molestias minus officia nemo omnis.
-                    </p>
-                </div>
-            </div>
-    </section>
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="txt-bg">
-                    <h2>CONTACT</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod cumque vitae accusantium qui nostrum,
-                        eum, rerum praesentium aliquam autem porro sapiente, esse laboriosam eos quam eveniet doloremque
-                        minima! Aliquam quam magnam placeat eos voluptates suscipit maiores id praesentium consequatur vitae
-                        tempora veritatis facilis debitis doloribus, repudiandae deleniti numquam nemo obcaecati illo, odit
-                        neque recusandae fugit! Aut inventore facilis molestiae. Velit et explicabo laboriosam quae ipsum
-                        atque, magni sequi magnam ipsam ullam odio provident quasi asperiores perspiciatis dolorem minima
-                        aspernatur adipisci, tenetur animi? Minima qui molestias quia mollitia! Exercitationem provident
-                        mollitia id, maxime adipisci sit impedit molestias minus officia nemo omnis.
-                    </p>
-                </div>
-            </div>
-    </section>
+  
 
     <!-- jQuery 主程式 -->
     <script src="./js/jquery-3.2.1.min.js"></script>
+    <!-- jQUERY主程式 -->
+    <script src="./dist/js/lightbox-plus-jquery.js"></script>
+    <!--燈箱效果主程式  -->
+    <script src="./dist/js/lightbox.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    
     <!-- 捲動主程式 -->
     <script src="./js/freelancer.min.js"></script>
     <!-- 轉場主程式 -->
@@ -154,6 +192,8 @@
     <!-- bs主程式 -->
     <script src="./js/bootstrap-4.0.0.js"></script>
     <script src="./js/popper.min.js"></script>
+    <script src="script.js"></script> 
+    
 </body>
 
 </html>
